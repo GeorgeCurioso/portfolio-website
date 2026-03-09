@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { SketchfabModel } from "./canvas";
+import { SketchfabModel } from "./3d-renders";
 
 // ===============================
 // CONSTANTS

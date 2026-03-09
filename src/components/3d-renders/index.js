@@ -1,5 +1,5 @@
 // ===============================
-// CANVAS COMPONENTS
+// 3D RENDERS COMPONENTS
 // ===============================
 
 export { default as TrooperCanvas } from "./Trooper";

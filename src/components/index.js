@@ -21,7 +21,7 @@ import {
   SketchfabModel,
   BallCanvas,
   StarsCanvas,
-} from "./canvas";
+} from "./3d-renders";
 
 // ===============================
 // EXPORTS
