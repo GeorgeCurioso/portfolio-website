@@ -58,18 +58,15 @@ const About = () => {
   return (
     <section>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <h2 className={styles.sectionHeadText}>Introduction</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="max-w-3xl mt-4 text-[17px] leading-[30px] text-secondary"
       >
-        I'm a passionate Data Scientist and AI Engineer specializing in Machine Learning,
-        Data Analytics, and Finance. My expertise lies in developing predictive models,
-        neural networks, and advanced AI algorithms to optimize operations and strategic
-        decisions in the financial sector. Let's collaborate together.
+      I'm a finance-focused professional with strong skills in data science,
+      machine learning, and quantitative analysis.
       </motion.p>
 
       <div className="flex flex-wrap gap-10 mt-20">

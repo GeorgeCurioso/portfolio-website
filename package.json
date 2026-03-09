@@ -1,7 +1,7 @@
 {
   "name": "jorge-flores-portfolio",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Personal Portfolio, acts like a CV",
   "type": "module",
 

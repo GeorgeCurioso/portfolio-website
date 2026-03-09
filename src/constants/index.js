@@ -168,9 +168,9 @@ export const testimonials = Object.freeze([
 
 export const projects = Object.freeze([
   {
-    name: "Neural Network for Safety",
+    name: "Mask Detection Neural Network",
     description:
-      "Mask detection model using TensorFlow and Keras, exploring advanced techniques such as data augmentation and transfer learning with MobileNet V2",
+      "CNN mask detection model built with TensorFlow using MobileNetV2 transfer learning.",
     tags: [
       { name: "machine-learning", color: "blue-text-gradient" },
       { name: "python", color: "green-text-gradient" },
@@ -181,9 +181,9 @@ export const projects = Object.freeze([
       "https://www.kaggle.com/code/jorgesamuelyanas/mask-detection-neural-network-for-safety",
   },
   {
-    name: "The nomad disease?",
+    name: "Nomad Cost of Living Analysis",
     description:
-      "Created the Nomad's Cost of Living Map on Tableau using Nomad List data, analyzing income disparity and happiness globally and in the Americas",
+      "Global cost-of-living analysis and visualization using Nomad List data in Tableau.",
     tags: [
       { name: "data-visualization", color: "blue-text-gradient" },
       { name: "data-analysis", color: "green-text-gradient" },

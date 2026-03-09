@@ -17,8 +17,8 @@ const INITIAL_FORM_STATE = {
   message: "",
 };
 
-const CONTACT_ANIMATION_DELAY = 0.2; 
-const CONTACT_ANIMATION_DURATION = 1; 
+const CONTACT_ANIMATION_DELAY = 0.2;
+const CONTACT_ANIMATION_DURATION = 1;
 const AUDIO_VOLUME = 0.7;
 
 // ===============================
@@ -52,7 +52,7 @@ const Contact = () => {
     const { name, email, message } = form;
 
     if (!name || !email || !message) {
-      alert("Incomplete, your message is. Fill in all fields, you must.");
+      alert("Please complete all fields before submitting.");
       return;
     }
 
@@ -64,9 +64,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: name,
-          to_name: "JavaScript Mastery",
+          to_name: "Jorge",
           from_email: email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "your@email.com",
           message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -75,10 +75,10 @@ const Contact = () => {
       setIsSuccess(true);
       setForm(INITIAL_FORM_STATE);
 
-      alert("Grateful, I am. Back to you, I will come soon");
+      alert("Thank you for your message. I will get back to you soon.");
     } catch (error) {
       console.error(error);
-      alert("Hmm, gone astray, things have. Try again, you must");
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -105,8 +105,7 @@ const Contact = () => {
         variants={slideIn("left", "tween", CONTACT_ANIMATION_DELAY, CONTACT_ANIMATION_DURATION)}
         className="flex-[0.75] p-8 rounded-2xl bg-black-100"
       >
-        <p className={styles.sectionSubText}>Get in touch, you must</p>
-        <h3 className={styles.sectionHeadText}>Hire me, you wish. Hmm?</h3>
+        <h3 className={styles.sectionHeadText}>Get in Touch</h3>
 
         <form
           ref={formRef}
@@ -114,29 +113,29 @@ const Contact = () => {
           className="flex flex-col gap-8 mt-12"
         >
           <FormField
-            label="Name, padawan"
+            label="Name"
             name="name"
             type="text"
-            placeholder="Name, tell me"
+            placeholder="Your name"
             value={form.name}
             onChange={handleChange}
           />
 
           <FormField
-            label="Email with the force"
+            label="Email"
             name="email"
             type="email"
-            placeholder="Share it with me, you shall"
+            placeholder="Your email address"
             value={form.email}
             onChange={handleChange}
           />
 
           <FormField
-            label="Your vision or dream"
+            label="Message"
             name="message"
             type="textarea"
             rows={7}
-            placeholder="Speak, you must. Message, what is it?"
+            placeholder="Write your message"
             value={form.message}
             onChange={handleChange}
           />
@@ -145,7 +144,7 @@ const Contact = () => {
             type="submit"
             className="w-fit py-3 px-8 font-bold text-primary bg-accent rounded-xl outline-none hover:bg-accent-light transition"
           >
-            {loading ? "Sending, I am... Hmmmhmhm" : "Send, you will"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </motion.div>
@@ -168,7 +167,7 @@ const Contact = () => {
 
 const FormField = ({ label, type, name, value, onChange, placeholder, rows }) => {
   const baseClasses =
-  "bg-black-200 py-4 px-6 placeholder:text-secondary text-white-100 rounded-lg outline-none border border-black-100 font-medium focus:border-accent";
+    "bg-black-200 py-4 px-6 placeholder:text-secondary text-white-100 rounded-lg outline-none border border-black-100 font-medium focus:border-accent";
 
   return (
     <label className="flex flex-col">

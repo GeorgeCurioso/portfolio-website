@@ -93,22 +93,8 @@ const Works = () => {
   return (
     <section>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
+        <h2 className={styles.sectionHeadText}>Projects & Insights</h2>
       </motion.div>
-
-      <div className="flex w-full">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="max-w-3xl mt-3 text-[17px] leading-[30px] text-secondary"
-        >
-          Explore a curated selection of projects showcasing my skills
-          and expertise through real-world examples. Each project is
-          accompanied by a brief description and links to code repositories,
-          demonstrating my ability to tackle complex challenges, work with
-          diverse technologies, and effectively manage projects
-        </motion.p>
-      </div>
 
       <div className="flex flex-wrap gap-7 mt-20">
         {projects.map((project, index) => (

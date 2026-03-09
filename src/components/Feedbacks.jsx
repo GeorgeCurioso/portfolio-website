@@ -73,7 +73,6 @@ const Feedbacks = () => {
     <section className="mt-12 bg-black-100 rounded-[20px]">
       <div className={`bg-primary rounded-2xl min-h-[300px] ${styles.padding}`}>
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>My learning path</p>
           <h2 className={styles.sectionHeadText}>Certifications</h2>
         </motion.div>
       </div>

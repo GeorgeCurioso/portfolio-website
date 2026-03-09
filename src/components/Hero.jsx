@@ -47,7 +47,7 @@ const Hero = () => {
             <br className="hidden sm:block" />
             and{" "}
             <span className="text-accent font-semibold">
-              Data Analytics
+              Data Science
             </span>{" "}
             in the financial sector
           </p>
