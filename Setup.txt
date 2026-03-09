@@ -1,0 +1,9 @@
+Para iniciar el proyecto de nuevo es necesario ejecutar los siguientes comandos: 
+
+npm install
+
+Para instalar los componentes necesarios y despues: 
+
+npm run dev
+
+Para ejecutar la pagina localmente y empezar a modificarla 
