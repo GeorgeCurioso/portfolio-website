@@ -1,13 +1,17 @@
 {
-  "name": "3dfolio",
+  "name": "jorge-flores-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
+  "description": "Personal Portfolio, acts like a CV",
   "type": "module",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx"
   },
+
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@react-three/drei": "^9.105.6",
@@ -21,6 +25,7 @@
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.164.1"
   },
+
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -32,5 +37,9 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.0"
+  },
+
+  "engines": {
+    "node": ">=18"
   }
 }
