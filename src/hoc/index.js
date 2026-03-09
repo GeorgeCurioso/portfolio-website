@@ -1,3 +1,3 @@
-import SectionWrapper from "./SectionWrapper";
+// src/hoc/index.js
 
-export { SectionWrapper };
+export { default as SectionWrapper } from "./SectionWrapper";
