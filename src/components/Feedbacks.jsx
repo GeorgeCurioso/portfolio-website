@@ -56,7 +56,7 @@ const FeedbackCard = ({
           <img
             src={image}
             alt={company}
-            className="object-cover w-10 h-10 rounded-full border border-accent"
+            className="object-cover w-10 h-10 rounded-full"
           />
         </div>
       </div>

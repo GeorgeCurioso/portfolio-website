@@ -1,8 +1,8 @@
 // sections
-import finance from "./sections/finance.png";
-import data from "./sections/data.png";
+import finance_data from "./sections/finance-data.png";
+import quant_analysis from "./sections/quant-analysis.png"
 import machine from "./sections/machine.png";
-import ai from "./sections/ai.png";
+import finance_engineer from "./sections/finance-engineer.png";
 
 // ui
 import logo from "./ui/logo.png";
@@ -22,7 +22,10 @@ import sql from "./tech-stack/sql.png";
 import anaconda from "./tech-stack/anaconda.png";
 
 // work experience
-import telus from "./work-experience/telus.jpeg";
+import jlg from "./work-experience/jlg.png";
+import laurus from "./work-experience/laurus.png";
+import telus from "./work-experience/telus.png";
+import rws from "./work-experience/rws.png"
 import gnp from "./work-experience/gnp.png";
 
 // projects
@@ -30,21 +33,23 @@ import mask from "./projects/mask.jpeg";
 import nomad from "./projects/nomad.png";
 
 // certifications
-import uc_davis from "./certifications/uc-davis.jpg"
-import microsoft from "./certifications/microsoft.png"
-import domestika from "./certifications/domestika.jpg"
-import google from "./certifications/google.jpg"
-import aws_logo from "./certifications/aws.png"
+import uc_davis from "./certifications/uc-davis.jpg";
+import microsoft from "./certifications/microsoft.png";
+import domestika from "./certifications/domestika.jpg";
+import google from "./certifications/google.jpg";
+import aws_logo from "./certifications/aws.png";
 
 export {
-  logo,
-  finance,
-  data,
+  finance_data,
+  quant_analysis,
   machine,
-  ai,
+  finance_engineer,
+
+  logo,
   code,
   menu,
   close,
+
   css,
   git,
   html,
@@ -54,10 +59,16 @@ export {
   spark,
   sql,
   anaconda,
+
+  jlg,
+  laurus,
   telus,
+  rws,
   gnp,
+
   mask,
   nomad,
+  
   uc_davis, 
   microsoft,
   domestika,
