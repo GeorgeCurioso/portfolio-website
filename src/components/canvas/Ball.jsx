@@ -1,30 +1,44 @@
-import React, { Suspense } from "react";
+import React, { Suspense, memo } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
+import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+// ===============================
+// CONSTANTS
+// ===============================
+
+const FLOAT_CONFIG = {
+  speed: 1.75,
+  rotationIntensity: 1,
+  floatIntensity: 2,
+};
+
+const BALL_SCALE = 2.75;
+const BALL_COLOR = "#fff8eb";
+
+// ===============================
+// BALL MESH
+// ===============================
+
+const Ball = ({ imgUrl }) => {
+  const [decal] = useTexture([imgUrl]);
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    <Float {...FLOAT_CONFIG}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+
+      <mesh castShadow receiveShadow scale={BALL_SCALE}>
         <icosahedronGeometry args={[1, 1]} />
+
         <meshStandardMaterial
-          color='#fff8eb'
+          color={BALL_COLOR}
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
         />
+
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
@@ -37,15 +51,20 @@ const Ball = (props) => {
   );
 };
 
+// ===============================
+// CANVAS WRAPPER
+// ===============================
+
 const BallCanvas = ({ icon }) => {
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
+
         <Ball imgUrl={icon} />
       </Suspense>
 
@@ -54,4 +73,4 @@ const BallCanvas = ({ icon }) => {
   );
 };
 
-export default BallCanvas;
+export default memo(BallCanvas);

@@ -1,27 +1,33 @@
-import logo from "./logo.png";
-import finance from "./finance.png";
-import data from "./data.png";
-import machine from "./machine.png";
-import ai from "./ai.png";
-import code from "./code.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+// sections
+import finance from "./sections/finance.png";
+import data from "./sections/data.png";
+import machine from "./sections/machine.png";
+import ai from "./sections/ai.png";
 
-import css from "./tech/css.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import aws from "./tech/aws.png";
-import python from "./tech/python.png";
-import r from "./tech/r.png";
-import spark from "./tech/spark.png";
-import sql from "./tech/sql.png";
-import anaconda from "./tech/anaconda.png";
+// ui
+import logo from "./ui/logo.png";
+import menu from "./ui/menu.svg";
+import close from "./ui/close.svg";
+import code from "./ui/link.png";
 
-import telus from "./company/telus.jpeg";
-import gnp from "./company/gnp.png";
+// tech stack
+import css from "./tech-stack/css.png";
+import git from "./tech-stack/git.png";
+import html from "./tech-stack/html.png";
+import aws from "./tech-stack/aws.png";
+import python from "./tech-stack/python.png";
+import r from "./tech-stack/r.png";
+import spark from "./tech-stack/spark.png";
+import sql from "./tech-stack/sql.png";
+import anaconda from "./tech-stack/anaconda.png";
 
-import mask from "./mask.jpeg";
-import nomad from "./nomad.png";
+// work experience
+import telus from "./work-experience/telus.jpeg";
+import gnp from "./work-experience/gnp.png";
+
+// projects
+import mask from "./projects/mask.jpeg";
+import nomad from "./projects/nomad.png";
 
 export {
   logo,

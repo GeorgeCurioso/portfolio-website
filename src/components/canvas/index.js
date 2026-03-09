@@ -1,6 +1,8 @@
-import TrooperCanvas from "./Trooper";
-import SketchfabModel from "./Anime"
-import BallCanvas from "./Ball";
-import StarsCanvas from "./Stars";
+// ===============================
+// CANVAS COMPONENTS
+// ===============================
 
-export { TrooperCanvas, SketchfabModel, BallCanvas, StarsCanvas };
+export { default as TrooperCanvas } from "./Trooper";
+export { default as SketchfabModel } from "./Anime";
+export { default as BallCanvas } from "./Ball";
+export { default as StarsCanvas } from "./Stars";

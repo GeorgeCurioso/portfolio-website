@@ -7,129 +7,143 @@ import { TrooperCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+// ===============================
+// CONSTANTS
+// ===============================
 
+const INITIAL_FORM_STATE = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+const CONTACT_ANIMATION_DELAY = 0.2; 
+const CONTACT_ANIMATION_DURATION = 1; 
+const AUDIO_VOLUME = 0.7;
+
+// ===============================
+// CONTACT COMPONENT
+// ===============================
+
+const Contact = () => {
+  const formRef = useRef(null);
+  const audioRef = useRef(null);
+
+  const [form, setForm] = useState(INITIAL_FORM_STATE);
   const [loading, setLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const audioRef = useRef();
+  // ===============================
+  // HANDLERS
+  // ===============================
 
-  const handleChange = (e) => {
-    const { target } = e;
+  const handleChange = ({ target }) => {
     const { name, value } = target;
 
-    setForm({
-      ...form,
+    setForm((prev) => ({
+      ...prev,
       [name]: value,
-    });
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if any field is empty
-    if (!form.name || !form.email || !form.message) {
+    const { name, email, message } = form;
+
+    if (!name || !email || !message) {
       alert("Incomplete, your message is. Fill in all fields, you must.");
       return;
     }
 
-    setLoading(true);
+    try {
+      setLoading(true);
 
-    emailjs
-      .send(
+      await emailjs.send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
+          from_name: name,
           to_name: "JavaScript Mastery",
-          from_email: form.email,
+          from_email: email,
           to_email: "sujata@jsmastery.pro",
-          message: form.message,
+          message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setIsSuccess(true);
-          alert("Grateful, I am. Back to you, I will come soon");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Hmm, gone astray, things have. Try again, you must");
-        }
       );
+
+      setIsSuccess(true);
+      setForm(INITIAL_FORM_STATE);
+
+      alert("Grateful, I am. Back to you, I will come soon");
+    } catch (error) {
+      console.error(error);
+      alert("Hmm, gone astray, things have. Try again, you must");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // Play audio when isSuccess changes to true
+  // ===============================
+  // EFFECTS
+  // ===============================
+
   useEffect(() => {
-    if (isSuccess) {
-      audioRef.current.volume = 0.7;
+    if (isSuccess && audioRef.current) {
+      audioRef.current.volume = AUDIO_VOLUME;
       audioRef.current.play();
     }
   }, [isSuccess]);
 
+  // ===============================
+  // RENDER
+  // ===============================
+
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+    <section className="flex flex-col-reverse gap-10 overflow-hidden xl:flex-row xl:mt-12">
       <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        variants={slideIn("left", "tween", CONTACT_ANIMATION_DELAY, CONTACT_ANIMATION_DURATION)}
+        className="flex-[0.75] p-8 rounded-2xl bg-black-100"
       >
         <p className={styles.sectionSubText}>Get in touch, you must</p>
         <h3 className={styles.sectionHeadText}>Hire me, you wish. Hmm?</h3>
 
-        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Name, padawan</span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Name, tell me"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Email with the force</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Share it with me, you shall"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your vision or dream</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='Speak, you must. Message, what is it?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-8 mt-12"
+        >
+          <FormField
+            label="Name, padawan"
+            name="name"
+            type="text"
+            placeholder="Name, tell me"
+            value={form.name}
+            onChange={handleChange}
+          />
+
+          <FormField
+            label="Email with the force"
+            name="email"
+            type="email"
+            placeholder="Share it with me, you shall"
+            value={form.email}
+            onChange={handleChange}
+          />
+
+          <FormField
+            label="Your vision or dream"
+            name="message"
+            type="textarea"
+            rows={7}
+            placeholder="Speak, you must. Message, what is it?"
+            value={form.message}
+            onChange={handleChange}
+          />
 
           <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            type="submit"
+            className="w-fit py-3 px-8 font-bold text-white rounded-xl shadow-md outline-none bg-tertiary shadow-primary"
           >
             {loading ? "Sending, I am... Hmmmhmhm" : "Send, you will"}
           </button>
@@ -137,15 +151,49 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        variants={slideIn("right", "tween", CONTACT_ANIMATION_DELAY, CONTACT_ANIMATION_DURATION)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <TrooperCanvas />
       </motion.div>
 
-      {/* Audio element for playing the sound */}
       <audio ref={audioRef} src="/cantina-band.mp3" preload="auto" />
-    </div>
+    </section>
+  );
+};
+
+// ===============================
+// FORM FIELD COMPONENT
+// ===============================
+
+const FormField = ({ label, type, name, value, onChange, placeholder, rows }) => {
+  const baseClasses =
+    "bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium";
+
+  return (
+    <label className="flex flex-col">
+      <span className="mb-4 font-medium text-white">{label}</span>
+
+      {type === "textarea" ? (
+        <textarea
+          name={name}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          rows={rows}
+          className={baseClasses}
+        />
+      ) : (
+        <input
+          type={type}
+          name={name}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          className={baseClasses}
+        />
+      )}
+    </label>
   );
 };
 

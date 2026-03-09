@@ -6,6 +6,17 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
+// ===============================
+// ANIMATION CONSTANTS
+// ===============================
+
+const CARD_ANIMATION_DELAY = 0.5;
+const CARD_ANIMATION_DURATION = 0.75;
+
+// ===============================
+// FEEDBACK CARD
+// ===============================
+
 const FeedbackCard = ({
   index,
   certification,
@@ -13,51 +24,70 @@ const FeedbackCard = ({
   month,
   year,
   image,
-}) => (
-  <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
-  >
-    <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{certification}</p>
+}) => {
+  const animation = fadeIn(
+    "",
+    "spring",
+    index * CARD_ANIMATION_DELAY,
+    CARD_ANIMATION_DURATION
+  );
 
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'></span> {company}
-          </p>
-          <p className='mt-1 text-secondary text-[12px]'>
-            {month} {year}
-          </p>
+  return (
+    <motion.div
+      variants={animation}
+      className="w-full p-10 rounded-3xl xs:w-[320px] bg-black-200"
+    >
+      <div className="mt-1">
+        <p className="text-[18px] tracking-wider text-white">{certification}</p>
+
+        <div className="flex items-center justify-between gap-1 mt-7">
+          <div className="flex flex-col flex-1">
+            <p className="text-[16px] font-medium text-white">
+              <span className="blue-text-gradient"></span> {company}
+            </p>
+
+            <p className="mt-1 text-[12px] text-secondary">
+              {month} {year}
+            </p>
+          </div>
+
+          <img
+            src={image}
+            alt={company}
+            className="object-cover w-10 h-10 rounded-full"
+          />
         </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
+
+// ===============================
+// FEEDBACK SECTION
+// ===============================
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
+    <section className="mt-12 bg-black-100 rounded-[20px]">
+      <div className={`bg-tertiary rounded-2xl min-h-[300px] ${styles.padding}`}>
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>My learning path</p>
           <h2 className={styles.sectionHeadText}>Certifications</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+
+      <div
+        className={`flex flex-wrap gap-7 -mt-20 pb-14 ${styles.paddingX}`}
+      >
         {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          <FeedbackCard
+            key={`${testimonial.company}-${testimonial.year}`}
+            index={index}
+            {...testimonial}
+          />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

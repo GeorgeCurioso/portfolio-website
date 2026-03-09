@@ -1,4 +1,7 @@
-import { TrooperCanvas, SketchfabModel, BallCanvas, StarsCanvas } from './canvas';
+// ===============================
+// CORE COMPONENTS
+// ===============================
+
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -9,19 +12,40 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
+// ===============================
+// 3D / CANVAS COMPONENTS
+// ===============================
+
+import {
+  TrooperCanvas,
+  SketchfabModel,
+  BallCanvas,
+  StarsCanvas,
+} from "./canvas";
+
+// ===============================
+// EXPORTS
+// ===============================
 
 export {
-  Hero,
+  // layout
   Navbar,
+  Hero,
+
+  // sections
   About,
   Tech,
   Experience,
   Works,
   Feedbacks,
   Contact,
+
+  // utilities
   CanvasLoader,
+
+  // canvas
   TrooperCanvas,
   SketchfabModel,
-  BallCanvas, 
-  StarsCanvas
+  BallCanvas,
+  StarsCanvas,
 };

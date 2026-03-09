@@ -1,101 +1,191 @@
-// ThreeAnimation.jsx
-import React, { useRef, useEffect } from 'react';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+// Trooper.jsx
+
+import React, { useRef, useEffect } from "react";
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+// ===============================
+// CONFIGURATION
+// ===============================
+
+const CAMERA_FOV = 25;
+const CAMERA_NEAR = 1;
+const CAMERA_FAR = 1000;
+
+const CAMERA_POSITION = [0, 5, 8];
+
+const AMBIENT_LIGHT_INTENSITY = 0.6;
+const DIRECTIONAL_LIGHT_INTENSITY = 3;
+
+const MODEL_PATH = "./dancing_stormtrooper/scene.gltf";
 
 const ThreeAnimation = () => {
-  const containerRef = useRef();
-  const clockRef = useRef();
-  const mixerRef = useRef();
+  const containerRef = useRef(null);
+  const clockRef = useRef(new THREE.Clock());
+  const mixerRef = useRef(null);
 
   useEffect(() => {
     const container = containerRef.current;
-    const clock = (clockRef.current = new THREE.Clock());
-    const camera = new THREE.PerspectiveCamera(25, container.clientWidth / container.clientHeight, 1, 1000);
+
+    if (!container) return;
+
+    // ===============================
+    // SCENE
+    // ===============================
+
     const scene = new THREE.Scene();
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
-    // Adjust the initial position and rotation of the camera
-    camera.position.set(0, 5, 8); // Move the camera higher
+    const camera = new THREE.PerspectiveCamera(
+      CAMERA_FOV,
+      container.clientWidth / container.clientHeight,
+      CAMERA_NEAR,
+      CAMERA_FAR
+    );
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-    scene.add(ambientLight);
+    camera.position.set(...CAMERA_POSITION);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
-    directionalLight.position.set(1.5, 1, -1.5);
-    scene.add(directionalLight);
-
-    const loader = new GLTFLoader();
-    loader.load('./dancing_stormtrooper/scene.gltf', (gltf) => {
-      const avatar = gltf.scene;
-      const animations = gltf.animations;
-
-      if (animations && animations.length) {
-        const mixer = new THREE.AnimationMixer(avatar);
-        animations.forEach((clip) => {
-          const action = mixer.clipAction(clip);
-          action.play();
-        });
-        mixerRef.current = mixer;
-      }
-
-      scene.add(avatar);
-
-      // Center the model in the scene
-      const box = new THREE.Box3().setFromObject(avatar);
-      const boxCenter = box.getCenter(new THREE.Vector3());
-      avatar.position.sub(boxCenter); // Shift the model's position so its center is at the origin
-
-      // Move the model up so it's fully visible
-      const modelHeight = box.max.y - box.min.y;
-      avatar.position.y += modelHeight / 2 + 0.15;
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true,
     });
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setClearColor(0x000000, 0); // Set the clear color to transparent
+    renderer.setClearColor(0x000000, 0);
+
     container.appendChild(renderer.domElement);
 
+    // ===============================
+    // LIGHTING
+    // ===============================
+
+    const ambientLight = new THREE.AmbientLight(
+      0xffffff,
+      AMBIENT_LIGHT_INTENSITY
+    );
+    scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(
+      0xffffff,
+      DIRECTIONAL_LIGHT_INTENSITY
+    );
+
+    directionalLight.position.set(1.5, 1, -1.5);
+    scene.add(directionalLight);
+
+    // ===============================
+    // CONTROLS
+    // ===============================
+
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableZoom = false; // Disable zoom
-    controls.enableDamping = false; // Disable damping
+
+    controls.enableZoom = false;
+    controls.enableDamping = false;
     controls.screenSpacePanning = true;
+
     controls.minDistance = 5;
     controls.maxDistance = 40;
-    controls.target.set(0, 2, 0); // Adjust the target to be more centered
+
+    controls.target.set(0, 2, 0);
     controls.update();
 
-    const onWindowResize = () => {
-      camera.aspect = container.clientWidth / container.clientHeight;
+    // ===============================
+    // MODEL LOADER
+    // ===============================
+
+    const loader = new GLTFLoader();
+
+    loader.load(MODEL_PATH, (gltf) => {
+      const model = gltf.scene;
+      const animations = gltf.animations;
+
+      if (animations?.length) {
+        const mixer = new THREE.AnimationMixer(model);
+
+        animations.forEach((clip) => {
+          mixer.clipAction(clip).play();
+        });
+
+        mixerRef.current = mixer;
+      }
+
+      scene.add(model);
+
+      // Center model
+
+      const box = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
+
+      model.position.sub(center);
+
+      const height = box.max.y - box.min.y;
+      model.position.y += height / 2 + 0.15;
+    });
+
+    // ===============================
+    // RESIZE HANDLER
+    // ===============================
+
+    const handleResize = () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      renderer.setSize(container.clientWidth, container.clientHeight);
+
+      renderer.setSize(width, height);
     };
+
+    window.addEventListener("resize", handleResize);
+
+    // ===============================
+    // ANIMATION LOOP
+    // ===============================
+
+    const clock = clockRef.current;
 
     const animate = () => {
       requestAnimationFrame(animate);
-      render();
-    };
 
-    const render = () => {
       const delta = clock.getDelta();
-      const slowFactor = 1; // Adjust this value to make the animation slower
+
       if (mixerRef.current) {
-        mixerRef.current.update(delta * slowFactor);
+        mixerRef.current.update(delta);
       }
+
       renderer.render(scene, camera);
     };
 
-    window.addEventListener('resize', onWindowResize);
     animate();
 
+    // ===============================
+    // CLEANUP
+    // ===============================
+
     return () => {
-      window.removeEventListener('resize', onWindowResize);
-      container.removeChild(renderer.domElement);
+      window.removeEventListener("resize", handleResize);
+
+      controls.dispose();
+      renderer.dispose();
+
+      if (container.contains(renderer.domElement)) {
+        container.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
-  return <div ref={containerRef} style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, right: 0 }} />;
+  return (
+    <div
+      ref={containerRef}
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+      }}
+    />
+  );
 };
 
 export default ThreeAnimation;

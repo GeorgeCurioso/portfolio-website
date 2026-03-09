@@ -7,37 +7,51 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
+// ===============================
+// ANIMATION CONSTANTS
+// ===============================
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+const CARD_ANIMATION_DELAY = 0.5;
+const CARD_ANIMATION_DURATION = 0.75;
+
+// ===============================
+// SERVICE CARD COMPONENT
+// ===============================
+
+const ServiceCard = ({ index, title, icon }) => {
+  const animation = fadeIn("right", "spring", index * CARD_ANIMATION_DELAY, CARD_ANIMATION_DURATION);
+
+  return (
+    <Tilt className="w-full xs:w-[250px]">
+      <motion.div
+        variants={animation}
+        className="w-full rounded-[20px] p-[1px] shadow-card green-pink-gradient"
+      >
+        <div
+          className="flex flex-col items-center justify-evenly min-h-[280px] py-5 px-12 rounded-[20px] bg-tertiary"
+        >
+          <img
+            src={icon}
+            alt={title}
+            className="object-contain w-16 h-16"
+          />
+
+          <h3 className="text-[20px] font-bold text-center text-white">
+            {title}
+          </h3>
+        </div>
+      </motion.div>
+    </Tilt>
+  );
+};
+
+// ===============================
+// ABOUT SECTION
+// ===============================
 
 const About = () => {
   return (
-    <>
+    <section>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
@@ -45,20 +59,24 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className="max-w-3xl mt-4 text-[17px] leading-[30px] text-secondary"
       >
-        I'm a passionate Data Scientist and AI Engineer specializing in Machine Learning, 
-        Data Analytics, and Finance. My expertise lies in developing predictive models, 
-        neural networks, and advanced AI algorithms to optimize operations and strategic 
+        I'm a passionate Data Scientist and AI Engineer specializing in Machine Learning,
+        Data Analytics, and Finance. My expertise lies in developing predictive models,
+        neural networks, and advanced AI algorithms to optimize operations and strategic
         decisions in the financial sector. Let's collaborate together.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className="flex flex-wrap gap-10 mt-20">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <ServiceCard
+            key={service.title}
+            index={index}
+            {...service}
+          />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
