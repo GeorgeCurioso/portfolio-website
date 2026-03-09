@@ -29,6 +29,7 @@ import rws from "./work-experience/rws.png"
 import gnp from "./work-experience/gnp.png";
 
 // projects
+import amib from "./projects/amib.jpg";
 import mask from "./projects/mask.jpeg";
 import nomad from "./projects/nomad.png";
 
@@ -66,6 +67,7 @@ export {
   rws,
   gnp,
 
+  amib,
   mask,
   nomad,
   

@@ -5,8 +5,8 @@
 import {
   finance_data, quant_analysis, machine, finance_engineer, 
   css, git, html, aws, python, r, spark, sql, anaconda, 
-  laurus, jlg, telus, rws, gnp, mask, nomad, uc_davis,
-  microsoft, domestika, google, aws_logo,
+  laurus, jlg, telus, rws, gnp, amib, mask, nomad, 
+  uc_davis, microsoft, domestika, google, aws_logo,
 } from "../assets";
 
 // ===============================
@@ -168,6 +168,18 @@ export const testimonials = Object.freeze([
 
 export const projects = Object.freeze([
   {
+  name: "AMIB-3 Certification Guide",
+  description:
+    "Comprehensive study guide for the AMIB-3 Investment Strategies Advisor certification exam.",
+  tags: [
+    { name: "amib-3", color: "blue-text-gradient" },
+    { name: "financial-education", color: "green-text-gradient" },
+    { name: "investments", color: "pink-text-gradient" },
+  ],
+  image: amib,
+  source_code_link: "https://spotless-sundial-514.notion.site/AMIB-3-Asesor-en-Estrategias-de-Inversion-79038ff61e7f434eb6814ad349b0aa70",
+  },
+  {
     name: "Mask Detection Neural Network",
     description:
       "CNN mask detection model built with TensorFlow using MobileNetV2 transfer learning.",
@@ -183,7 +195,7 @@ export const projects = Object.freeze([
   {
     name: "Nomad Cost of Living Analysis",
     description:
-      "Global cost-of-living analysis and visualization using Nomad List data in Tableau.",
+      "Global cost-of-living analysis and visualization using Nomad List data in Tableau for country comparisons.",
     tags: [
       { name: "data-visualization", color: "blue-text-gradient" },
       { name: "data-analysis", color: "green-text-gradient" },
