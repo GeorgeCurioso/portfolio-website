@@ -4,7 +4,8 @@
 
 import {
   finance, data, machine, ai, css, git, html, aws, python, r,
-  spark, sql, anaconda, telus, gnp, mask, nomad,
+  spark, sql, anaconda, telus, gnp, mask, nomad, uc_davis, 
+  microsoft, domestika, google, aws_logo,
 } from "../assets";
 
 // ===============================
@@ -99,40 +100,35 @@ export const testimonials = Object.freeze([
     company: "University of California",
     month: "April",
     year: "2024",
-    image:
-      "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png?auto=format%2Ccompress&dpr=1&w=180&h=180",
+    image: uc_davis,
   },
   {
     certification: "Data Analysis Fundamentals with Excel",
     company: "Microsoft",
     month: "February",
     year: "2024",
-    image:
-      "https://static-00.iconduck.com/assets.00/microsoft-icon-2048x2048-xtoxrveo.png",
+    image: microsoft,
   },
   {
     certification: "Introduction to AI with Python",
     company: "Domestika",
     month: "January",
     year: "2024",
-    image:
-      "https://seeklogo.com/images/D/domestika-logo-010C51BB5B-seeklogo.com.png",
+    image: domestika,
   },
   {
     certification: "Google Data Analytics",
     company: "Google",
     month: "April",
     year: "2023",
-    image:
-      "https://freelogopng.com/images/all_img/1657952641google-logo-png-image.png",
+    image: google,
   },
   {
     certification: "Cloud Practitioner",
     company: "Amazon Web Services",
     month: "January",
     year: "2023",
-    image:
-      "https://www.pngall.com/wp-content/uploads/13/AWS-Logo-PNG-File.png",
+    image: aws_logo,
   },
 ]);
 

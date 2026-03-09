@@ -29,6 +29,13 @@ import gnp from "./work-experience/gnp.png";
 import mask from "./projects/mask.jpeg";
 import nomad from "./projects/nomad.png";
 
+// certifications
+import uc_davis from "./certifications/uc-davis.jpg"
+import microsoft from "./certifications/microsoft.png"
+import domestika from "./certifications/domestika.jpg"
+import google from "./certifications/google.jpg"
+import aws_logo from "./certifications/aws.png"
+
 export {
   logo,
   finance,
@@ -51,4 +58,9 @@ export {
   gnp,
   mask,
   nomad,
+  uc_davis, 
+  microsoft,
+  domestika,
+  google,
+  aws_logo,
 };
