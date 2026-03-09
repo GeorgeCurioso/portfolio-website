@@ -7,7 +7,6 @@ import { SketchfabModel } from "./3d-renders";
 // CONSTANTS
 // ===============================
 
-const ACCENT_COLOR = "#6aa84f";
 const SCROLL_ANIMATION = {
   animate: { y: [0, 24, 0] },
   transition: {
@@ -23,7 +22,7 @@ const SCROLL_ANIMATION = {
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto bg-primary">
 
       {/* HERO CONTENT */}
       <div
@@ -32,24 +31,25 @@ const Hero = () => {
 
         {/* LEFT INDICATOR */}
         <div className="flex flex-col items-center justify-center mt-5">
-          <div
-            className="w-5 h-5 rounded-full"
-            style={{ backgroundColor: ACCENT_COLOR }}
-          />
-          <div className="w-1 h-40 sm:h-80 green-gradient" />
+          <div className="w-5 h-5 rounded-full bg-accent" />
+          <div className="w-1 h-40 sm:h-80 bg-accent opacity-70" />
         </div>
 
         {/* TEXT CONTENT */}
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span style={{ color: ACCENT_COLOR }}>Jorge Yanas</span>
+          <h1 className={`${styles.heroHeadText}`}>
+            Hi, I'm <span className="text-accent">Jorge Yanas</span>
           </h1>
 
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText} mt-2`}>
             I specialize in{" "}
-            <u style={{ color: ACCENT_COLOR }}>Machine Learning</u>,
+            <span className="text-accent font-semibold">Machine Learning</span>,
             <br className="hidden sm:block" />
-            and <u style={{ color: ACCENT_COLOR }}>Data Analytics</u> in the financial sector
+            and{" "}
+            <span className="text-accent font-semibold">
+              Data Analytics
+            </span>{" "}
+            in the financial sector
           </p>
         </div>
       </div>
@@ -63,7 +63,7 @@ const Hero = () => {
           <div className="flex items-start justify-center p-2 border-4 rounded-3xl border-secondary w-[35px] h-[64px]">
             <motion.div
               {...SCROLL_ANIMATION}
-              className="w-3 h-3 mb-1 rounded-full bg-secondary"
+              className="w-3 h-3 mb-1 rounded-full bg-accent"
             />
           </div>
         </a>

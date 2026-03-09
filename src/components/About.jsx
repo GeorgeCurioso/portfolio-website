@@ -19,16 +19,21 @@ const CARD_ANIMATION_DURATION = 0.75;
 // ===============================
 
 const ServiceCard = ({ index, title, icon }) => {
-  const animation = fadeIn("right", "spring", index * CARD_ANIMATION_DELAY, CARD_ANIMATION_DURATION);
+  const animation = fadeIn(
+    "right",
+    "spring",
+    index * CARD_ANIMATION_DELAY,
+    CARD_ANIMATION_DURATION
+  );
 
   return (
     <Tilt className="w-full xs:w-[250px]">
       <motion.div
         variants={animation}
-        className="w-full rounded-[20px] p-[1px] shadow-card green-pink-gradient"
+        className="w-full rounded-[20px] p-[1px] shadow-card bg-accent"
       >
         <div
-          className="flex flex-col items-center justify-evenly min-h-[280px] py-5 px-12 rounded-[20px] bg-tertiary"
+          className="flex flex-col items-center justify-evenly min-h-[280px] py-5 px-12 rounded-[20px] bg-black-100"
         >
           <img
             src={icon}
@@ -36,7 +41,7 @@ const ServiceCard = ({ index, title, icon }) => {
             className="object-contain w-16 h-16"
           />
 
-          <h3 className="text-[20px] font-bold text-center text-white">
+          <h3 className="text-[20px] font-bold text-center text-white-100">
             {title}
           </h3>
         </div>

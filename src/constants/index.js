@@ -24,19 +24,19 @@ export const navLinks = Object.freeze([
 
 export const services = Object.freeze([
   {
-    title: "Data Scientist",
+    title: "Financial Data Science",
     icon: data,
   },
   {
-    title: "AI Engineer",
+    title: "Quantitative Analysis",
     icon: ai,
   },
   {
-    title: "Machine Learning Specialist",
+    title: "Machine Learning",
     icon: machine,
   },
   {
-    title: "Financial Data Analyst",
+    title: "Financial Engineering",
     icon: finance,
   },
 ]);

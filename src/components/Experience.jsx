@@ -17,12 +17,12 @@ import { textVariant } from "../utils/motion";
 // ===============================
 
 const TIMELINE_CONTENT_STYLE = {
-  background: "#1d1836",
-  color: "#fff",
+  background: "#121212", // black-100
+  color: "#F3F3F3", // white-100
 };
 
 const TIMELINE_ARROW_STYLE = {
-  borderRight: "7px solid #232631",
+  borderRight: "7px solid #D4AF37", // accent
 };
 
 // ===============================
@@ -49,7 +49,10 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <header>
-        <h3 className="text-[24px] font-bold text-[#6aa84f]">{title}</h3>
+        <h3 className="text-[24px] font-bold text-accent">
+          {title}
+        </h3>
+
         <p
           className="text-[16px] font-semibold text-secondary"
           style={{ margin: 0 }}

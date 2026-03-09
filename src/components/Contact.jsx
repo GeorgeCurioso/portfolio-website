@@ -143,7 +143,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-fit py-3 px-8 font-bold text-white rounded-xl shadow-md outline-none bg-tertiary shadow-primary"
+            className="w-fit py-3 px-8 font-bold text-primary bg-accent rounded-xl outline-none hover:bg-accent-light transition"
           >
             {loading ? "Sending, I am... Hmmmhmhm" : "Send, you will"}
           </button>
@@ -168,11 +168,11 @@ const Contact = () => {
 
 const FormField = ({ label, type, name, value, onChange, placeholder, rows }) => {
   const baseClasses =
-    "bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium";
+  "bg-black-200 py-4 px-6 placeholder:text-secondary text-white-100 rounded-lg outline-none border border-black-100 font-medium focus:border-accent";
 
   return (
     <label className="flex flex-col">
-      <span className="mb-4 font-medium text-white">{label}</span>
+      <span className="mb-4 font-medium text-white-100">{label}</span>
 
       {type === "textarea" ? (
         <textarea

@@ -41,7 +41,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="w-full p-5 rounded-2xl sm:w-[360px] bg-tertiary"
+        className="w-full p-5 rounded-2xl sm:w-[360px] bg-black-100 shadow-card"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -53,7 +53,7 @@ const ProjectCard = ({
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <button
               onClick={handleOpenSource}
-              className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer black-gradient"
+              className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer black-gradient hover:bg-accent transition"
               aria-label={`Open source code for ${name}`}
             >
               <img
@@ -66,7 +66,7 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-[24px] font-bold text-white">{name}</h3>
+          <h3 className="text-[24px] font-bold text-white-100">{name}</h3>
           <p className="mt-2 text-[14px] text-secondary">{description}</p>
         </div>
 

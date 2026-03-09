@@ -35,15 +35,17 @@ const FeedbackCard = ({
   return (
     <motion.div
       variants={animation}
-      className="w-full p-10 rounded-3xl xs:w-[320px] bg-black-200"
+      className="w-full p-10 rounded-3xl xs:w-[320px] bg-black-200 shadow-card"
     >
       <div className="mt-1">
-        <p className="text-[18px] tracking-wider text-white">{certification}</p>
+        <p className="text-[18px] tracking-wider text-white-100">
+          {certification}
+        </p>
 
         <div className="flex items-center justify-between gap-1 mt-7">
           <div className="flex flex-col flex-1">
-            <p className="text-[16px] font-medium text-white">
-              <span className="blue-text-gradient"></span> {company}
+            <p className="text-[16px] font-medium text-accent">
+              {company}
             </p>
 
             <p className="mt-1 text-[12px] text-secondary">
@@ -54,7 +56,7 @@ const FeedbackCard = ({
           <img
             src={image}
             alt={company}
-            className="object-cover w-10 h-10 rounded-full"
+            className="object-cover w-10 h-10 rounded-full border border-accent"
           />
         </div>
       </div>
@@ -69,7 +71,7 @@ const FeedbackCard = ({
 const Feedbacks = () => {
   return (
     <section className="mt-12 bg-black-100 rounded-[20px]">
-      <div className={`bg-tertiary rounded-2xl min-h-[300px] ${styles.padding}`}>
+      <div className={`bg-primary rounded-2xl min-h-[300px] ${styles.padding}`}>
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>My learning path</p>
           <h2 className={styles.sectionHeadText}>Certifications</h2>

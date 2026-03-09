@@ -57,7 +57,7 @@ const Navbar = () => {
       className={`
         ${styles.paddingX}
         fixed top-0 z-20 w-full flex items-center py-5
-        ${scrolled ? "bg-primary" : "bg-transparent"}
+        ${scrolled ? "bg-primary backdrop-blur-md shadow-lg" : "bg-transparent"}
       `}
     >
       <div className="flex items-center justify-between w-full mx-auto max-w-7xl">
@@ -75,7 +75,7 @@ const Navbar = () => {
             className="object-contain w-9 h-9"
           />
 
-          <p className="flex text-[18px] font-bold text-white cursor-pointer">
+          <p className="flex text-[18px] font-bold text-white-100 cursor-pointer">
             Jorge Yanas &nbsp;
             <span className="hidden sm:block">
               | Portfolio Website
@@ -91,10 +91,10 @@ const Navbar = () => {
               key={nav.id}
               className={`
                 text-[18px] font-medium cursor-pointer
-                ${active === nav.title ? "text-white" : "text-secondary"}
-                hover:text-white
+                ${active === nav.title ? "text-accent" : "text-secondary"}
+                hover:text-accent
+                transition-colors duration-200
               `}
-              onClick={() => handleNavClick(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
@@ -117,7 +117,7 @@ const Navbar = () => {
               ${!isMenuOpen ? "hidden" : "flex"}
               absolute top-20 right-0 z-10
               min-w-[140px] p-6 mx-4 my-2
-              rounded-xl black-gradient
+              rounded-xl bg-black-100
             `}
           >
             <ul className="flex flex-col items-start justify-end flex-1 gap-4 list-none">
@@ -126,9 +126,9 @@ const Navbar = () => {
                   key={nav.id}
                   className={`
                     text-[16px] font-medium cursor-pointer font-poppins
-                    ${active === nav.title ? "text-white" : "text-secondary"}
+                    ${active === nav.title ? "text-accent" : "text-secondary"}
+                    hover:text-accent
                   `}
-                  onClick={() => handleNavClick(nav.title)}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>

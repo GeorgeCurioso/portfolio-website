@@ -2,24 +2,6 @@ import React from "react";
 import { Html, useProgress } from "@react-three/drei";
 
 // ===============================
-// STYLES
-// ===============================
-
-const containerStyle = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-};
-
-const textStyle = {
-  fontSize: 14,
-  color: "#F1F1F1",
-  fontWeight: 800,
-  marginTop: 40,
-};
-
-// ===============================
 // COMPONENT
 // ===============================
 
@@ -28,12 +10,16 @@ const CanvasLoader = () => {
   const progressValue = progress.toFixed(2);
 
   return (
-    <Html as="div" center style={containerStyle}>
-      <span className="canvas-loader" />
+    <Html center>
+      <div className="flex flex-col items-center justify-center">
 
-      <p style={textStyle}>
-        {progressValue}%
-      </p>
+        <span className="canvas-loader border-accent" />
+
+        <p className="mt-10 text-accent font-extrabold text-sm">
+          {progressValue}%
+        </p>
+
+      </div>
     </Html>
   );
 };
