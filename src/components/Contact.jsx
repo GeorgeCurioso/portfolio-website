@@ -142,7 +142,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-fit py-3 px-8 font-bold text-primary bg-accent rounded-xl outline-none hover:bg-accent-light transition"
+            className="w-fit py-3 px-8 font-bold text-primary bg-accent rounded-xl outline-none transition"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>

@@ -22,7 +22,7 @@ const SCROLL_ANIMATION = {
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto bg-primary">
+    <section className="relative w-full h-screen mx-auto">
 
       {/* HERO CONTENT */}
       <div

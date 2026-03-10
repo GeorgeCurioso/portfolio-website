@@ -22,7 +22,7 @@ const TIMELINE_CONTENT_STYLE = {
 };
 
 const TIMELINE_ARROW_STYLE = {
-  borderRight: "7px solid #D4AF37", // accent
+  borderRight: "7px solid #c22f82", // accent
 };
 
 // ===============================

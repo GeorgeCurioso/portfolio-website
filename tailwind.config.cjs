@@ -15,21 +15,21 @@ module.exports = {
     extend: {
       colors: {
         // main palette
-        primary: "#0B0B0B",     // negro profundo
-        secondary: "#9CA3AF",   // gris elegante
-        accent: "#D4AF37",      // dorado moderno
+        primary: "#050816",     
+        secondary: "#9CA3AF",  
+        accent: "#c22f82",      
         "accent-light": "#F5E6A8",
 
         // backgrounds
-        "black-100": "#121212",
-        "black-200": "#1A1A1A",
+        "black-100": "#100d25",
+        "black-200": "#090325",
 
         // text
-        "white-100": "#F3F3F3",
+        "white-100": "#f3f3f3",
       },
 
       boxShadow: {
-        card: "0px 35px 120px -15px rgba(212,175,55,0.15)",
+        card: "0px 35px 120px -15px rgba(194,47,130,0.20)",
       },
 
       screens: {
