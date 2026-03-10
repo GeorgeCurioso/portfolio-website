@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets";
 
 // ===============================
 // CONSTANTS
@@ -69,11 +69,6 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={handleLogoClick}
         >
-          <img
-            src={logo}
-            alt="logo"
-            className="object-contain w-9 h-9"
-          />
 
           <p className="flex text-[18px] font-bold text-white-100 cursor-pointer">
             Jorge Yanas &nbsp;

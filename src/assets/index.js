@@ -5,7 +5,6 @@ import machine from "./sections/machine.png";
 import finance_engineer from "./sections/finance-engineer.png";
 
 // ui
-import logo from "./ui/logo.png";
 import menu from "./ui/menu.svg";
 import close from "./ui/close.svg";
 import code from "./ui/link.png";
@@ -46,7 +45,6 @@ export {
   machine,
   finance_engineer,
 
-  logo,
   code,
   menu,
   close,

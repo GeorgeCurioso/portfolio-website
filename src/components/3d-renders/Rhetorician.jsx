@@ -66,7 +66,7 @@ const Rhetorician = () => {
 
         <OrbitControls
           autoRotate
-          autoRotateSpeed={1.5}
+          autoRotateSpeed={1.25}
           enableZoom={false}
         />
       </Canvas>
