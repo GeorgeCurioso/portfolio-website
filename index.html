@@ -37,7 +37,23 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
+    <div id="mobile-warning" style="display:none; font-family: Arial, sans-serif; text-align:center; padding:40px;">
+      <h2>This portfolio is optimized for desktop viewing.</h2>
+      <p>Please access the site from a computer for the best experience.</p>
+    </div>
+
     <div id="root"></div>
+  
+    <script>
+      function isMobile() {
+        return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+      }
+
+      if (isMobile()) {
+        document.getElementById("mobile-warning").style.display = "block";
+        document.getElementById("root").style.display = "none";
+      }
+    </script>
 
     <script type="module" src="/src/main.jsx"></script>
   </body>
