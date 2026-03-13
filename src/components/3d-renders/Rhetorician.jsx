@@ -8,7 +8,7 @@ import { OrbitControls, useGLTF, useAnimations } from "@react-three/drei";
 
 const MODEL_PATH = "rhetorician/scene.gltf";
 
-const MODEL_POSITION = [0, -7, 0];
+const MODEL_POSITION = [0, -6.8, -0.1];
 const MODEL_SCALE = [1.5, 1.5, 1.5];
 const MODEL_ROTATION_Y = -Math.PI / 3;
 
@@ -68,6 +68,8 @@ const Rhetorician = () => {
           autoRotate
           autoRotateSpeed={1.25}
           enableZoom={false}
+          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 2}
         />
       </Canvas>
     </div>

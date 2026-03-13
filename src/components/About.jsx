@@ -65,7 +65,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="max-w-3xl mt-4 text-[17px] leading-[30px] text-secondary"
       >
-      I'm a finance-focused professional with strong skills in data science,
+      Finance-focused professional with experience in data science,
       machine learning, and quantitative analysis.
       </motion.p>
 

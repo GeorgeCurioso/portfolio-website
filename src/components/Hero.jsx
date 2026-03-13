@@ -42,14 +42,12 @@ const Hero = () => {
           </h1>
 
           <p className={`${styles.heroSubText} mt-2`}>
-            Specialist in{" "}
-            <span className="text-accent font-semibold">Machine Learning</span>,
+            <span className="text-accent font-semibold">Machine Learning</span> and{" "}
             <br className="hidden sm:block" />
-            and{" "}
             <span className="text-accent font-semibold">
               Data Science
             </span>{" "}
-            in the financial sector
+            for finance
           </p>
         </div>
       </div>
