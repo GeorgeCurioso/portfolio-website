@@ -6,7 +6,7 @@ import { OrbitControls, useGLTF, useAnimations } from "@react-three/drei";
 // CONSTANTS
 // ===============================
 
-const MODEL_PATH = "rhetorician/scene.gltf";
+const MODEL_PATH = "/rhetorician/scene.gltf";
 
 const MODEL_POSITION = [0, -6.8, -0.1];
 const MODEL_SCALE = [1.5, 1.5, 1.5];

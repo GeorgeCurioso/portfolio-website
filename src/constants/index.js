@@ -177,7 +177,7 @@ export const projects = Object.freeze([
     { name: "investments", color: "pink-text-gradient" },
   ],
   image: amib,
-  source_code_link: "https://spotless-sundial-514.notion.site/AMIB-3-Asesor-en-Estrategias-de-Inversion-79038ff61e7f434eb6814ad349b0aa70",
+  source_code_link: "/guia-amib-3/index.html",
   },
   {
     name: "Mask Detection Neural Network",

@@ -18,7 +18,7 @@ const CAMERA_POSITION = [0, 5, 8];
 const AMBIENT_LIGHT_INTENSITY = 0.6;
 const DIRECTIONAL_LIGHT_INTENSITY = 3;
 
-const MODEL_PATH = "./dancing_stormtrooper/scene.gltf";
+const MODEL_PATH = "/dancing_stormtrooper/scene.gltf";
 
 const ThreeAnimation = () => {
   const containerRef = useRef(null);
