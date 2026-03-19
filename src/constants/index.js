@@ -177,7 +177,7 @@ export const projects = Object.freeze([
     { name: "investments", color: "pink-text-gradient" },
   ],
   image: amib,
-  source_code_link: "/guia-amib-3/index.html",
+  source_code_link: "/guia-amib-3/",
   },
   {
     name: "Mask Detection Neural Network",
