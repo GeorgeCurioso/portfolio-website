@@ -62,7 +62,7 @@ I developed this project through multiple iterations, focusing on both design an
 Clone the repository:
 
 ```bash id="n7w6mx"
-git clone https://github.com/TU_USUARIO/portfolio-website.git
+git clone https://github.com/GeorgeCurioso/portfolio-website.git
 ```
 
 Go into the project folder:
