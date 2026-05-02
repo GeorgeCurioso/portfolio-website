@@ -1,0 +1,679 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Futuros</title>
+    <link rel="icon" type="image/png" href="../assets/icon.png" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <article class="page sans">
+        <header><img class="page-cover-image" src="../assets/header.jpg" style="object-position:center 81.47%" />
+            <div class="nav-button">
+                <button onclick="window.history.back()">← Regresar</button>
+            </div>
+            <div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="../assets/icon.png" />
+            </div>
+            <h1 class="page-title" dir="auto">Futuros</h1>
+            <p class="page-description" dir="auto"></p>
+        </header>
+        <div class="page-body">
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">1. Introducción
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">1.1 Tipos de mercado</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>MexDer</strong>: mercado
+                                listado, organizado y estandarizado en el que se ofrecen instrumentos para planear,
+                                cubrir y administrar riesgos financieros. La liquidación se hace con una contraparte
+                                central llamada <strong>ASIGNA</strong> y el riesgo de contraparte es muy bajo.</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Mercado OTC:</strong> mercado
+                                extrabursátil y hecho a la medida, donde los instrumentos se negocian directamente entre
+                                dos partes. La liquidación se hace entre las partes y el riesgo de contraparte es muy
+                                elevado.</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">1.2 Tipos de derivados</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <div class="column-list">
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <h3 class="">
+                                                <strong>MexDer</strong>
+                                            </h3>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <p class="">
+                                                <strong>Futuro<br /></strong>Contrato estandarizado que obliga a comprar
+                                                o vender un activo a una fecha futura y liquidara la contraparte central
+                                            </p>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <p class="">
+                                                <strong>Opción<br /></strong>Contrato listado en Bolsa que da el
+                                                derecho, pero no la obligación, de comprar o vender un activo en el
+                                                futuro mediante una prima y un precio de ejercicio
+                                            </p>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <p class="">
+                                                <strong>Engrapado<br /></strong>Contrato estandarizado con vencimientos
+                                                sucesivos que permite intercambio financiero de divisas o tasas de
+                                                interés
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <h3 class=""><strong>OTC</strong>
+                                            </h3>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <p class="">
+                                                <strong>Forward<br /></strong>Contrato hecho a la medida para comprar o
+                                                vender un activo específico en una fecha futura, negociado directamente
+                                                entre las partes
+                                            </p>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <p class="">
+                                                <strong>Warrant<br /></strong>Contrato hecho a la medida que da el
+                                                derecho, pero no la obligación, de comprar o vender un activo en el
+                                                futuro mediante una prima y un precio de ejercicio
+                                            </p>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <p class="">
+                                                <strong>Swap<br /></strong>Acuerdo de intercambio financiero en el que
+                                                una parte paga flujos monetarios periódicos a cambio de recibir otros
+                                                flujos de la contraparte
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">1.3 Usos de los derivados</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Cobertura</strong>: busca reducir o eliminar
+                                    perdidas</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Especulación</strong>: busca beneficiarse de la
+                                    apreciación o depreciación del precio del subyacente</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Apalancamiento</strong>: busca aprovechar
+                                    movimientos del subyacente con una inversion menor al valor de mercado</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Rollover</strong>: mantener una posición y
+                                    cerrarla al vencimiento para abrir otra en un vencimiento posterior</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">2. Participantes y
+                        funcionamiento</summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Bolsa de derivados
+                                    (MexDer)</strong>: Lugar físico donde se negocian contratos que fijan hoy el precio
+                                de compra o venta de un activo financiero para pagarlo o entregarlo después</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Funciones:</strong></p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Ofrece la infraestructura tecnológica y procedimientos
+                                    para celebrar contratos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Desarrolla los contratos que serán negociados</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Determina los parámetros de riesgo aplicables a los
+                                    contratos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Supervisa las operación de los contratos </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Proveer información veraz de los contratos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Cámara de
+                                    compensación</strong>: Fideicomiso conocido como ASIGNA, Compensación y Liquidación,
+                                numero F/30,430</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Funciones:</strong></p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Ser garante de las obligaciones financieras</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Registra, liquida y compensa los contratos listados en
+                                    Bolsa</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Actuar como contraparte en cada operación</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Registro y guardado de la información de los contratos
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Socio liquidador</strong>:
+                                Fideicomiso que participa como accionista de MexDer y aporta el patrimonio de Asigna. Su
+                                función es liquidar, y celebrar por cuenta de clientes los contratos operados en MexDer
+                            </p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Socio liquidador por cuenta propia</strong>:
+                                    <br />Compensa y liquida solo operación de sus fideicomitentes o del grupo
+                                    empresarial al que pertenecen
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Socio liquidador por cuenta de
+                                        terceros</strong>:<br />Compensa y liquida operaciones por cuenta de terceros
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Socio operador</strong>:
+                                Institución de crédito, casa de bolsa u otra persona moral autorizada que tiene acceso
+                                al Sistema Electrónico de Negociación para celebrar contratos en el MexDer</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Formador de mercado</strong>:
+                                Operador aprobado por MexDer que mantiene en forma permanente cotizaciones de compra o
+                                venta de contratos de futuro y opción para promover su negociación</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">3. Conceptos operativos
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Posición abierta:</strong>
+                                número de contratos de <strong>opción </strong>abiertos y no liquidados</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Interés abierto:</strong>
+                                número de contratos de <strong>futuro </strong>pendientes de liquidarse al final de la
+                                sesión</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Volumen operado:</strong>
+                                cantidad de contratos operados en un día</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Posición opuesta:</strong>
+                                posición formada por contratos largos de una serie y contratos cortos de otra serie,
+                                siempre que ambas sean de la misma clase</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Posición al
+                                    vencimiento:</strong> número de contratos que esperan hasta el vencimiento para
+                                liquidarse</p>
+                        </div>
+                        <div style="display:contents" dir="ltr">
+                            <figure class="block-color-gray_background callout" style="white-space:normal;display:flex">
+                                <div style="font-size:1.5em"><span class="icon">💡</span></div>
+                                <div style="width:100%">
+                                    <div style="display:contents" dir="auto">
+                                        <p class="">En la oferta o saldo
+                                            final, <strong>si es compra se resta</strong> y <strong>si es venta se
+                                                suma</strong> para obtener el interés abierto o la posición abierta</p>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">3.2 Cuenta Global</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Cuenta global:</strong> cuenta
+                                administrada por un operador o socio liquidador donde se registran operaciones de
+                                derivados de uno o varios clientes siguiendo sus instrucciones de forma individual y
+                                anónima</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">4. Garantía, liquidación
+                        y gestión de riesgo</summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.1 Aportaciones</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>AIMs (Aportaciones Iniciales
+                                    Mínimas):</strong> <br />Recursos solicitados diariamente por la Cámara para cubrir
+                                la pérdida potencial esperada de los contratos abiertos</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>EAIMs (Excedentes de
+                                    Aportaciones Iniciales Mínimas):</strong> <br />Diferencia entre la aportación
+                                inicial solicitada al cliente por el socio liquidador y la AIM solicitada por la Cámara
+                            </p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>EXAIMs (Aportaciones
+                                    extraordinarias):</strong> <br />Suma que exige la Cámara en circunstancias
+                                especiales, cuando la AIM se está agotando; se pide por llamada de margen</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.2 Liquidaciones</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Liquidación diaria:</strong>
+                                <br />Sumas que deben solicitarse, recibirse y entregarse diariamente por la valuación
+                                diaria que hace la Cámara sobre los contratos abiertos
+                            </p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Liquidación
+                                    extraordinaria:</strong> <br />Suma exigida ante variaciones intradía en el precio
+                                del subyacente o incrementos de posiciones; debe cubrirse en máximo una hora</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Llamada de margen:</strong>
+                                <br />Orden que emite la Cámara al socio liquidador para poner al margen las garantías
+                                entregadas inicialmente
+                            </p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.3 Activos en garantía</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Valores que pueden entregarse
+                                    como aportaciones:</strong></p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Acciones de mediana y alta bursatilidad.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Valores gubernamentales nacionales.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Valores gubernamentales extranjeros.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Dólares americanos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.4 Fondos de seguridad</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Fondo de
+                                    aportaciones:</strong> fondo constituido con las AIMs entregadas por inversionistas
+                                a los socios a la Cámara de Compensación por cada contrato abierto</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Fondo de
+                                    compensación:</strong> fondo administrado por la Cámara con recursos adicionales a
+                                las AIM en efectivo, aportados por los socios liquidadores de posición propia y de
+                                terceros; equivale al 8% del fondo de aportaciones</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.5 Red de seguridad</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="1">
+                                <li><strong>Nivel 1: EAIMs</strong><br />Recursos del cliente incumplido para cubrir
+                                    pérdidas iniciales</li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="2">
+                                <li><strong>Nivel 2: AIMs</strong><br />Garantías del socio liquidador incumplido usadas
+                                    para cubrir pérdidas</li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="3">
+                                <li><strong>Nivel 3: Fondo de compensación</strong><br />Recursos de socios del mismo
+                                    grupo financiero para cubrir incumplimiento</li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="4">
+                                <li><strong>Nivel 4: Fondo de compensación adicional</strong><br />Recursos generales
+                                    del fondo de compensación para cubrir pérdidas restantes</li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="5">
+                                <li><strong>Nivel 5: Patrimonio del fideicomiso</strong><br />Recursos compartidos entre
+                                    socios liquidadores para cubrir pérdidas</li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="6">
+                                <li><strong>Nivel 6: Patrimonio de ASIGNA</strong><br />Recursos propios de la cámara
+                                    para cubrir incumplimientos finales</li>
+                            </ol>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">5. Contratos de futuros
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Contrato de futuro:</strong>
+                                contrato estandarizado y listado en Bolsa que permite fijar hoy el precio de compra y/o
+                                venta de un bien para ser pagado y entregado en una fecha futura</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">5.1 Características</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Tamaño del contrato:</strong> número de
+                                    unidades que ampara cada contrato según el activo subyacente</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Clave de la pizarra:</strong> conjunto de
+                                    símbolos para identificar el contrato; se forma con la clave del activo, el día, el
+                                    mes y el año de vencimiento</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Clase:</strong> activo subyacente, como dólar,
+                                    acciones, bonos o IPC</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Serie:</strong> fecha de vencimiento o
+                                    liquidación; puede ser mensual, bimestral o trimestral</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Unidad de cotización:</strong> depende del
+                                    activo subyacente</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Fluctuación mínima o puja:</strong> depende del
+                                    subyacente; puede ser de 0.0001 pesos, $1.00 por contrato en dólar y euro, cinco
+                                    puntos del IPC equivalentes a $50.00, 0.0001 puntos base en swap o 4 decimales en
+                                    engrapados</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">5.2 Factores del precio</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Precio del contrato de futuro o liquidación.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Precio de mercado del subyacente.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Tasa libre de riesgo.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Plazo.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Precio de liquidación diaria o precio de cierre.</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">5.3 Clave de pizarra</h2>
+                        </div>
+                        <div style="display:contents" dir="ltr">
+                            <figure class="image"><a href="Futuros/image.png"><img style="width:665.9375px"
+                                        src="../assets/derivados-financieros-y-riesgos/futuros/image.png" /></a>
+                            </figure>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">5.4 Base en futuros</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Base:</strong> Diferencia
+                                entre el precio del futuro y el precio spot</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Si aumenta → se <strong>refuerza la base</strong></li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Si disminuye → se <strong>debilita la base</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Más diferencia → precios más separados</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Menos diferencia → precios más cercanos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">6. Canasta de
+                        entregables y Cheapest to Deliver</summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Canasta de
+                                    entregables:</strong> conjunto de bonos que pueden entregarse para cumplir un
+                                contrato de futuro sobre bonos. El vendedor puede elegir cualquiera de los títulos de la
+                                canasta para liquidar su posición corta</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Cheapest to Deliver
+                                    (CTD):</strong> los bonos más baratos de entregar dentro de la canasta. MexDer
+                                publica factores de conversión y tasas anuales de rendimiento para definirlos</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">7. Tamaños de contrato y
+                        precio de liquidación </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">7.1 Tamaño de contratos por
+                                subyacente</h2>
+                        </div>
+                        <div style="display:contents" dir="ltr">
+                            <figure class="image"><a href="Futuros/tamano.png"><img style="width:506.75px"
+                                        src="../assets/derivados-financieros-y-riesgos/futuros/image-1.png" /></a>
+                            </figure>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">7.2 Precio de liquidación (orden de
+                                calculo)</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Precio de
+                                    liquidación:</strong> Valor usado para cerrar y valuar contratos al final del día.
+                            </p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Orden de cálculo:</strong></p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="1">
+                                <li><strong>Promedio de operaciones (últimos 5 minutos)</strong><br />Se usa el promedio
+                                    ponderado de operaciones recientes.</li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="2">
+                                <li><strong>Promedio de posturas (si no hubo operaciones)</strong><br />Se usa el
+                                    promedio de posturas vigentes al cierre.</li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ol type="1" class="numbered-list" start="3">
+                                <li><strong>Cálculo por MexDer (si no hay información)</strong>
+                                    <div style="display:contents" dir="auto">
+                                        <ol type="a" class="numbered-list" start="1">
+                                            <li>Ultimo precio operado</li>
+                                        </ol>
+                                    </div>
+                                    <div style="display:contents" dir="auto">
+                                        <ol type="a" class="numbered-list" start="2">
+                                            <li>Precio del día anterior</li>
+                                        </ol>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div style="display:contents" dir="ltr">
+                            <figure class="block-color-gray_background callout" style="white-space:normal;display:flex">
+                                <div style="font-size:1.5em"><span class="icon">💡</span></div>
+                                <div style="width:100%">
+                                    <div style="display:contents" dir="auto">
+                                        <p class="">Si no hay operaciones ni
+                                            posturas en un futuro, MexDer determina el precio del contrato de forma
+                                            discrecional</p>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>
