@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Opciones</title>
+    <link rel="icon" type="image/png" href="../assets/icon.png" />
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+    <article class="page sans">
+        <header><img class="page-cover-image" src="../assets/header.jpg"
+                style="object-position:center 87.77000000000001%" />
+            <div class="nav-button">
+                <button onclick="window.history.back()">← Regresar</button>
+            </div>
+            <div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="../assets/icon.png" />
+            </div>
+            <h1 class="page-title" dir="auto">Opciones</h1>
+            <p class="page-description" dir="auto"></p>
+        </header>
+        <div class="page-body">
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">1. Contratos de opción
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">1.1 Definición</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Contratos de opción</strong>:
+                                Contrato listado en Bolsa en el que el comprador, al pagar una prima, adquiere el
+                                derecho pero no la obligación de comprar o vender un activo subyacente a un precio
+                                pactado en una fecha futura. El vendedor asume la obligación correspondiente.</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">1.2 Posiciones básicas</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Call largo</strong>: compra de una opción de
+                                    compra</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Call corto</strong>: venta de una opción de
+                                    compra</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Put largo</strong>: compra de una opción de
+                                    venta</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Put corto</strong>: venta de una opción de
+                                    venta</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="ltr">
+                            <figure class="block-color-gray_background callout" style="white-space:normal;display:flex">
+                                <div style="font-size:1.5em"><span class="icon">💡</span></div>
+                                <div style="width:100%">
+                                    <div style="display:contents" dir="auto">
+                                        <p class="">El comprador tiene el
+                                            derecho (por que paga la prima)<br />El vendedor tiene la obligación (por
+                                            que recibe la prima)</p>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">2. Elementos y
+                        características</summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">2.1 Elementos clave</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Prima</strong>: precio de la opción; lo paga el
+                                    comprador o lo recibe el vendedor</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Precio de ejercicio (K)</strong>: precio
+                                    pactado para comprar o vender el subyacente, no puede modificarse</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Precio spot (S)</strong>: precio de mercado del
+                                    activo subyacente</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Tamaño del contrato</strong>: numero de
+                                    unidades que ampara cada contrato</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Clase</strong>: contratos referidos al mismo
+                                    subyacente</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Serie</strong>: contratos de la misma clase con
+                                    distinta fecha de vencimiento</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">2.2 Tipo de ejercicio y liquidación
+                            </h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Estilo americano</strong>: puede ejercerse
+                                    entre la compra y el vencimiento; se usa en acciones</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Estilo europeo</strong>: solo puede ejercerse
+                                    al vencimiento; se usa en IPC y dólar</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Liquidación por diferenciales</strong>: pago de
+                                    la diferencia entre spot y ejercicio</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Liquidación en especie</strong>: entrega del
+                                    activo subyacente al vencimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">3. Precio de la opción
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">3.1 Estructura</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <figure class="equation">
+                                $$\text{Prima} = \text{Valor intrínseco} + \text{Valor extrínseco}$$
+                            </figure>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">3.2 Valor intrínseco</h2>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Valor intrínseco: \(\text{call} = S - K\)</li>
+                                <li>Valor intrínseco: \(\text{put} = K - S\)</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <blockquote class="">El valor intrínseco nunca
+                                puede ser negativo; si no hay ventaja, vale cero</blockquote>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">3.3 Valor extrínseco</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <figure class="equation">
+                                $$\text{Valor extrínseco} = \text{Prima} - \text{Valor intrínseco}$$
+                            </figure>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class="">Tambien se llama valor del tiempo.
+                                Disminuye conforme se acerca el vencimiento y depende de la volatilidad, del tiempo y
+                                del precio del subyacente </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">4. Tipos de opciones
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.1 Call largo</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <div class="column-list">
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="ltr">
+                                            <figure class="image"><a
+                                                    href="../assets/derivados-financieros-y-riesgos/opciones/image.png"><img
+                                                        style="width:375px"
+                                                        src="../assets/derivados-financieros-y-riesgos/opciones/image.png" /></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Derecho</strong>: comprar</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Expectativa</strong>: alcista
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ITM</strong>: S &gt; K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ATM</strong>: S = K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>OTM</strong>: S &lt; K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Valor intrínseco</strong>: S -
+                                                    K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Perfil de riesgo</strong>:
+                                                    perdidas limitadas a la prima; ganancias ilimitadas si el subyacente
+                                                    sube</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.2 Call corto</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <div class="column-list">
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="ltr">
+                                            <figure class="image"><a
+                                                    href="../assets/derivados-financieros-y-riesgos/opciones/image-1.png"><img
+                                                        style="width:375px"
+                                                        src="../assets/derivados-financieros-y-riesgos/opciones/image-1.png" /></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Obligación:</strong> vender
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Expectativa:</strong> bajista o
+                                                    lateral</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ITM:</strong> S &lt; K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ATM:</strong> S = K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>OTM:</strong> S &gt; K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Valor intrínseco:</strong> S -
+                                                    K</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Perfil de riesgo:</strong>
+                                                    pérdidas ilimitadas si el subyacente sube; ganancias limitadas a la
+                                                    prima</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.3 Put largo</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <div class="column-list">
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="ltr">
+                                            <figure class="image"><a
+                                                    href="../assets/derivados-financieros-y-riesgos/opciones/image-2.png"><img
+                                                        style="width:375px"
+                                                        src="../assets/derivados-financieros-y-riesgos/opciones/image-2.png" /></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Derecho:</strong> vender</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Expectativa:</strong> bajista
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ITM:</strong> K &gt; S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ATM:</strong> K = S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>OTM:</strong> K &lt; S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Valor intrínseco:</strong> K -
+                                                    S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Perfil de riesgo:</strong>
+                                                    pérdidas limitadas a la prima; ganancias ilimitadas si el subyacente
+                                                    baja</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">4.4 Put corto</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <div class="column-list">
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="ltr">
+                                            <figure class="image"><a
+                                                    href="../assets/derivados-financieros-y-riesgos/opciones/image-3.png"><img
+                                                        style="width:375px"
+                                                        src="../assets/derivados-financieros-y-riesgos/opciones/image-3.png" /></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Obligación:</strong> comprar
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Expectativa:</strong> alcista
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ITM:</strong> K &lt; S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>ATM:</strong> K = S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>OTM:</strong> K &gt; S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Valor intrínseco:</strong> K -
+                                                    S</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>Perfil de riesgo:</strong>
+                                                    pérdidas ilimitadas si el subyacente baja; ganancias limitadas a la
+                                                    prima</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">5. Modelos de valuación
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">5.1 Black-Scholes</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class="">Es una fórmula para valorar una opción
+                                financiera basada en procesos estocásticos</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h3 class="">Supuestos:</h3>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Sin costos de transacción ni impuestos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Tasa libre de riesgo constante</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">La acción no paga dividendos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Volatilidad constante</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Se permite venta en corto</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">No hay arbitraje sin riesgo</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Retornos con distribución normal</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h3 class="">Limitación clave:</h3>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class="">No representa la realidad de forma
+                                perfecta; es una adaptación</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">5.2 Modelo binomial</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class="">Asume que el precio del subyacente
+                                puede seguir distintos caminos aleatorios con probabilidades asociadas. Luego calcula el
+                                pago esperado al vencimiento y lo trae a valor presente</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h3 class="">Idea clave:</h3>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Usa métodos numéricos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">Es adecuado para opciones americanas</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc">También puede usarse para opciones europeas</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="ltr">
+                            <figure class="block-color-gray_background callout" style="white-space:normal;display:flex">
+                                <div style="font-size:1.5em"><span class="icon">💡</span></div>
+                                <div style="width:100%">
+                                    <div style="display:contents" dir="auto">
+                                        <p class="">
+                                            <strong>Black-Scholes:</strong> mejor para
+                                            europeo<br /><strong>Binomial:</strong> mejor para americano
+                                        </p>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">6. Griegas</summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Griegas:</strong> miden cómo
+                                cambia el precio de la opción cuando cambian sus factores de riesgo</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Delta:</strong> cambia la prima cuando cambia
+                                    el <strong><span style="border-bottom:0.05em solid">precio del
+                                            subyacente</span></strong></li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Gamma:</strong> cambia la <strong><span
+                                            style="border-bottom:0.05em solid">delta</span></strong> cuando cambia el
+                                    subyacente</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Theta:</strong> cambia la prima con el paso del
+                                    <strong><span style="border-bottom:0.05em solid">tiempo</span></strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Rho:</strong> cambia la prima cuando cambia la
+                                    <strong><span style="border-bottom:0.05em solid">tasa</span></strong> libre de
+                                    riesgo
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Vega:</strong> cambia la prima cuando cambia la
+                                    <strong><span style="border-bottom:0.05em solid">volatilidad</span></strong> del
+                                    subyacente
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">7. Paridad y cobertura
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">7.1 Paridad call-put</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class="">La paridad put/call relaciona call,
+                                put y subyacente para que exista equilibrio entre precios. Cuando se rompe ese
+                                equilibrio pueden aparecer oportunidades de arbitraje</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <figure class="equation">
+                                $$C + \frac{K}{(1+r)^t} = P + S$$
+                            </figure>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class="">Variables que aparecen:</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <div class="column-list">
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>C:</strong> prima del call</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>P:</strong> prima del put</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>K:</strong> precio de ejercicio
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display:contents" dir="auto">
+                                    <div style="width:50%" class="column">
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>S:</strong> precio del
+                                                    subyacente</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>r:</strong> tasa libre de
+                                                    riesgo</li>
+                                            </ul>
+                                        </div>
+                                        <div style="display:contents" dir="auto">
+                                            <ul class="bulleted-list">
+                                                <li style="list-style-type:disc"><strong>t:</strong> tiempo al
+                                                    vencimiento</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">7.2 Delta hedging</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class="">Una estrategia delta neutral busca que
+                                la delta total sea igual o muy cercana a cero. Así, pequeños cambios en el subyacente no
+                                alteran casi la estrategia</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <blockquote class="">Si la delta total es casi
+                                cero, la posición queda más protegida ante movimientos pequeños del subyacente
+                            </blockquote>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">8. Estrategias y
+                        opciones sintéticas</summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <details close="">
+                                <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">8.1 Opciones
+                                    Sintéticas</summary>
+                                <div class="indented">
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Call sintético</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Long futuro</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-4.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-4.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Long put</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-5.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-5.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Misma K</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Mismo
+                                                                            vencimiento</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Expectativa:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Alcista</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Replica un
+                                                        <strong>call largo</strong> usando un long futuro + long put.
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-6.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-6.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">
+                                                        Replica un call sin comprar call</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Put sintético</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Short futuro</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-21.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-21.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Long call</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-7.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-7.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Misma K</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Mismo
+                                                                            vencimiento</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Expectativa:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Bajista</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Replica un
+                                                        <strong>put largo</strong> usando un short futuro + long call.
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-8.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-8.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">
+                                                        Replica un put sin comprar put</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <details close="">
+                                <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">8.2
+                                    Estrategias de Volatilidad</summary>
+                                <div class="indented">
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Straddle</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Long call sintético ATM (K1)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-6.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-6.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Long put sintético ATM (K2)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-8.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-8.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K1 = K2</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Mismo
+                                                                            vencimiento</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Volatilidad:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Alta</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Formado por un
+                                                        long call sintético + long put sintético.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Gana con
+                                                        movimientos fuertes en cualquier dirección.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-9.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-9.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">
+                                                        Movimiento fuerte = gana</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Strangle</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Long call sintético OTM (K1)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-6.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-6.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Long put sintético OTM (K2)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-8.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-8.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K1 &lt; K2</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Mismo
+                                                                            vencimiento</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Volatilidad:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Alta</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Similar al
+                                                        straddle pero con strikes diferentes.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Necesita mayor
+                                                        movimiento para ganar.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-10.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-10.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">Más
+                                                        barato, pero exige más movimiento</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <details close="">
+                                <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">8.3
+                                    Estrategias de Baja Volatilidad</summary>
+                                <div class="indented">
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Butterfly</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Long call ITM (K1)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-11.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-11.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="3">
+                                                                        <li>Short call ATM (K3)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-12.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-12.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Short call ATM (K2)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="4">
+                                                                        <li>Long call OTM (K4)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-14.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-14.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K1 &lt; K2 = K3
+                                                                            &lt; K4</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Equidistantes
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Volatilidad:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Baja</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Gana si el
+                                                        precio se mantiene cerca del strike medio.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-15.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-15.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">
+                                                        Mercado lateral = gana</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Cóndor</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Long call ITM (K1)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-11.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-11.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="3">
+                                                                        <li>Short call OTM (K3)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Short call ITM (K2)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="4">
+                                                                        <li>Long call OTM (K4)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-11.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-11.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K1 &lt; K2 &lt;
+                                                                            K3 &lt; K4</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Volatilidad:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Baja</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Gana si el
+                                                        precio se mantiene dentro de un rango (entre K2 y K3).</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-16.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-16.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">Rango
+                                                        estable = gana</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <details close="">
+                                <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">8.4 Spreads
+                                </summary>
+                                <div class="indented">
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Bull spread</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Long call ITM (K1)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-11.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-11.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Short call OTM (K2)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K1 &lt; K2</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Expectativa:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Alcista
+                                                                            moderada</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Gana si el
+                                                        precio sube de forma controlada.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-17.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-17.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">
+                                                        Subida moderada = gana</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Bear spread</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Short call ITM (K1)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Long call OTM (K2)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-11.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-11.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K1 &lt; K2</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Expectativa:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Bajista
+                                                                            moderada</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Gana si el
+                                                        precio baja o no sube mucho.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-18.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-18.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">
+                                                        Mercado débil = gana</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Ratio spread</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Long call ITM (K1)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-11.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-11.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="3">
+                                                                        <li>Short call OTM (K3)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png""><img
+                                                                                style=" width:264px"
+                                                                            src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Short call OTM (K2)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K1 &lt; K2 = K3
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Expectativa:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Alcista
+                                                                            moderada</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Volatilidad:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Baja / estable
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Gana si el
+                                                        precio sube moderadamente,</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">pero tiene
+                                                        riesgo si sube demasiado.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-19.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-19.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">
+                                                        Subida leve = gana<br />Subida fuerte = riesgo</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <details close="">
+                                <summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">8.5 Cobertura
+                                </summary>
+                                <div class="indented">
+                                    <div style="display:contents" dir="auto">
+                                        <details close="">
+                                            <summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">
+                                                Collar / Túnel largo</summary>
+                                            <div class="indented">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Composición:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="1">
+                                                                        <li>Largo en el subyacente</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-4.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-4.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="3">
+                                                                        <li>Short call OTM (K_call)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-13.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-13.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ol type="1" class="numbered-list" start="2">
+                                                                        <li>Long put OTM (K_put)</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div style="display:contents" dir="ltr">
+                                                                    <figure class="image"><a
+                                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-5.png"><img
+                                                                                style="width:375px"
+                                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-5.png" /></a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <div class="column-list">
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>K:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">K_put &lt;
+                                                                            K_call</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display:contents" dir="auto">
+                                                            <div style="width:50%" class="column">
+                                                                <div style="display:contents" dir="auto">
+                                                                    <p class=""><strong>Expectativa:</strong></p>
+                                                                </div>
+                                                                <div style="display:contents" dir="auto">
+                                                                    <ul class="bulleted-list">
+                                                                        <li style="list-style-type:disc">Alcista
+                                                                            conservadora</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">
+                                                        <strong>Interpretación:</strong>
+                                                    </p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Protege contra
+                                                        caídas y limita ganancias.</p>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <hr />
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <p class=""><strong>Payoff
+                                                            combinado:</strong></p>
+                                                </div>
+                                                <div style="display:contents" dir="ltr">
+                                                    <figure class="image"><a
+                                                            href="../assets/derivados-financieros-y-riesgos/opciones/image-20.png"><img
+                                                                style="width:375px"
+                                                                src="../assets/derivados-financieros-y-riesgos/opciones/image-20.png" /></a>
+                                                    </figure>
+                                                </div>
+                                                <div style="display:contents" dir="auto">
+                                                    <blockquote class="">Piso
+                                                        (protección) + techo (límite)</blockquote>
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div style="display:contents" dir="auto">
+                <details close="">
+                    <summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">9. Otros derivados
+                    </summary>
+                    <div class="indented">
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">9.1 Swaps</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Swap:</strong> contrato por el
+                                que dos partes intercambian flujos de dinero en fechas futuras. En MexDer está
+                                referenciado a la TIIE de fondeo</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h3 class="">Condiciones generales:</h3>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Subyacente:</strong> TIIE de fondeo (tasa
+                                    overnight)</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Tamaño del contrato:</strong> $100,000.00 M.N.
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Periodo del contrato:</strong> desde 2 meses
+                                    (2x1) hasta 30 años (390x1)</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Clave de pizarra:</strong> número de cupones de
+                                    28 días x1</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Unidad de cotización:</strong> tasa de interés
+                                    nominal fija en puntos porcentuales a cuatro decimales</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Fluctuación mínima:</strong> 0.0001 de la tasa
+                                    anual</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Margen inicial mínimo:</strong> desde $60.00
+                                    hasta $18,000.00 pesos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Marginación opuesta:</strong> $64.00 pesos</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Horario de negociación:</strong> 7:30 a 15:00
+                                    horas</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Liquidación al vencimiento:</strong> día hábil
+                                    siguiente al vencimiento</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Tipo de cambio para valuación:</strong> tipo de
+                                    cambio spot a 48 horas</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="ltr">
+                            <figure class="block-color-gray_background callout" style="white-space:normal;display:flex">
+                                <div style="font-size:1.5em"><span class="icon">💡</span></div>
+                                <div style="width:100%">
+                                    <div style="display:contents" dir="auto">
+                                        <p class="">Los swaps permiten
+                                            intercambiar flujos de tasa fija vs variable tomando como referencia la TIIE
+                                        </p>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">9.2 Engrapados</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Engrapado:</strong> postura
+                                única para operar varias fechas de vencimiento sucesivas, al mismo precio y de forma
+                                simultánea</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Engrapado de divisas:</strong> busca replicar
+                                    un forward (swap) de tipo de cambio</li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <ul class="bulleted-list">
+                                <li style="list-style-type:disc"><strong>Engrapado de tasas:</strong> permite fijar o
+                                    convertir tasas fijas y variables para distintos periodos<div
+                                        style="display:contents" dir="ltr">
+                                        <figure class="block-color-gray_background callout"
+                                            style="white-space:normal;display:flex">
+                                            <div style="font-size:1.5em"><span class="icon">💡</span></div>
+                                            <div style="width:100%">
+                                                <div style="display:contents" dir="auto">
+                                                    <p class="">Misma clase +
+                                                        mismo precio</p>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <hr />
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <h2 class="">9.3 Notas estructuradas</h2>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <p class=""><strong>Nota estructurada:</strong>
+                                instrumento híbrido formado por un activo de renta fija y una o más estrategias
+                                derivadas, normalmente opciones, para ligar la rentabilidad a un activo</p>
+                        </div>
+                        <div style="display:contents" dir="auto">
+                            <blockquote class="">La nota estructurada mezcla
+                                <strong>protección de capital</strong> con <strong>potencial derivado</strong>
+                            </blockquote>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>
