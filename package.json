@@ -4,14 +4,12 @@
   "version": "3.2.1",
   "description": "Personal Portfolio, acts like a CV",
   "type": "module",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext js,jsx"
   },
-
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@react-three/drei": "^9.105.6",
@@ -25,7 +23,6 @@
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.164.1"
   },
-
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -38,7 +35,6 @@
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.0"
   },
-
   "engines": {
     "node": ">=18"
   }
