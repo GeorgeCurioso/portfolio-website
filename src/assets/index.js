@@ -15,12 +15,13 @@ import git from "./tech-stack/git.png";
 import html from "./tech-stack/html.png";
 import aws from "./tech-stack/aws.png";
 import python from "./tech-stack/python.png";
-import r from "./tech-stack/r.png";
-import spark from "./tech-stack/spark.png";
+import vba from "./tech-stack/vba.png";
+import snowflake from "./tech-stack/snowflake.png";
 import sql from "./tech-stack/sql.png";
 import anaconda from "./tech-stack/anaconda.png";
 
 // work experience
+import tala from "./work-experience/tala.png";
 import jlg from "./work-experience/jlg.png";
 import laurus from "./work-experience/laurus.png";
 import telus from "./work-experience/telus.png";
@@ -29,15 +30,11 @@ import gnp from "./work-experience/gnp.png";
 
 // projects
 import amib from "./projects/amib.jpg";
-import mask from "./projects/mask.jpeg";
-import nomad from "./projects/nomad.png";
 
 // certifications
+import amib_cert from "./certifications/amib-cert.png";
 import uc_davis from "./certifications/uc-davis.jpg";
-import microsoft from "./certifications/microsoft.png";
-import domestika from "./certifications/domestika.jpg";
 import google from "./certifications/google.jpg";
-import aws_logo from "./certifications/aws.png";
 
 export {
   finance_data,
@@ -54,11 +51,12 @@ export {
   html,
   aws,
   python,
-  r,
-  spark,
+  vba,
+  snowflake,
   sql,
   anaconda,
 
+  tala,
   jlg,
   laurus,
   telus,
@@ -66,12 +64,8 @@ export {
   gnp,
 
   amib,
-  mask,
-  nomad,
   
+  amib_cert,
   uc_davis, 
-  microsoft,
-  domestika,
   google,
-  aws_logo,
 };

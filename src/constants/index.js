@@ -4,9 +4,9 @@
 
 import {
   finance_data, quant_analysis, machine, finance_engineer, 
-  css, git, html, aws, python, r, spark, sql, anaconda, 
-  laurus, jlg, telus, rws, gnp, amib, mask, nomad, 
-  uc_davis, microsoft, domestika, google, aws_logo,
+  css, git, html, aws, python, vba, snowflake, sql, anaconda, 
+  tala, laurus, jlg, telus, rws, gnp, amib,
+  amib_cert, uc_davis, google,
 } from "../assets";
 
 // ===============================
@@ -37,7 +37,7 @@ export const services = Object.freeze([
     icon: machine,
   },
   {
-    title: "Financial Engineering",
+    title: "Fintech",
     icon: finance_engineer,
   },
 ]);
@@ -49,9 +49,9 @@ export const services = Object.freeze([
 export const technologies = Object.freeze([
   { name: "Python", icon: python },
   { name: "AWS", icon: aws },
-  { name: "Apache Spark", icon: spark },
+  { name: "Snowflake", icon: snowflake },
   { name: "SQL", icon: sql },
-  { name: "R", icon: r },
+  { name: "VBA", icon: vba },
   { name: "Git", icon: git },
   { name: "HTML", icon: html },
   { name: "CSS", icon: css },
@@ -63,6 +63,17 @@ export const technologies = Object.freeze([
 // ===============================
 
 export const experiences = Object.freeze([
+  {
+    title: "Reconciliation Analyst",
+    company_name: "Tala Mobile",
+    icon: tala,
+    iconBg: "#ffffff",
+    date: "May 2026 - Present",
+    points: [
+      "Supporting FinTech reconciliations across 6 countries, covering 1.5M+ monthly transactions.",
+      "Automated reconciliations with Python, Snowflake, SQL, Pandas, and VBA, enabling ~2-hour processing and T+1 discrepancy visibility.",
+    ],
+  },
   {
     title: "Financial Analyst",
     company_name: "JLG Industries",
@@ -126,39 +137,25 @@ export const experiences = Object.freeze([
 
 export const testimonials = Object.freeze([
   {
-    certification: "SQL Basics for Data Science",
+    certification: "Investment Strategies Advisor (Series 210)",
+    company: "AMIB",
+    month: "June",
+    year: "2026",
+    image: amib_cert,
+  },
+  {
+    certification: "SQL Basics for Data Science Specialization",
     company: "University of California",
     month: "April",
     year: "2024",
     image: uc_davis,
   },
   {
-    certification: "Data Analysis Fundamentals with Excel",
-    company: "Microsoft",
-    month: "February",
-    year: "2024",
-    image: microsoft,
-  },
-  {
-    certification: "Introduction to AI with Python",
-    company: "Domestika",
-    month: "January",
-    year: "2024",
-    image: domestika,
-  },
-  {
-    certification: "Google Data Analytics",
+    certification: "Google Data Analytics Professional Certificate",
     company: "Google",
     month: "April",
     year: "2023",
     image: google,
-  },
-  {
-    certification: "Cloud Practitioner",
-    company: "Amazon Web Services",
-    month: "January",
-    year: "2023",
-    image: aws_logo,
   },
 ]);
 
@@ -178,31 +175,5 @@ export const projects = Object.freeze([
   ],
   image: amib,
   source_code_link: "/guia-amib-3/",
-  },
-  {
-    name: "Mask Detection Neural Network",
-    description:
-      "CNN mask detection model built with TensorFlow using MobileNetV2 transfer learning.",
-    tags: [
-      { name: "machine-learning", color: "blue-text-gradient" },
-      { name: "python", color: "green-text-gradient" },
-      { name: "neural networks", color: "pink-text-gradient" },
-    ],
-    image: mask,
-    source_code_link:
-      "https://www.kaggle.com/code/jorgesamuelyanas/mask-detection-neural-network-for-safety",
-  },
-  {
-    name: "Nomad Cost of Living Analysis",
-    description:
-      "Global cost-of-living analysis and visualization using Nomad List data in Tableau for country comparisons.",
-    tags: [
-      { name: "data-visualization", color: "blue-text-gradient" },
-      { name: "data-analysis", color: "green-text-gradient" },
-      { name: "data-cleaning", color: "pink-text-gradient" },
-    ],
-    image: nomad,
-    source_code_link:
-      "https://www.kaggle.com/code/jorgesamuelyanas/the-nomad-disease/notebook",
   },
 ]);
